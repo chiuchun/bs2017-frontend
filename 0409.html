@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <button type="button" class="btn btn-default" onclick="today()">button</button>
+
+    <script>
+        var author = ['1a', '2a']
+
+
+        alert(author[0]);
+        function today() {
+            var today = new Date();
+            alert(today.toDateString());
+        }
+        function print(message) {
+            document.write(message);
+        }
+        print('Hello worid');
+
+        var answer = prompt('what month were you bron', '');
+        document.write("你輸入: " + answer);
+        function functionName(parameter1, parameter1) {
+            return value;
+        }
+
+        var score=0;
+        var questions=[
+            ['s',1],
+            ['a',31]
+
+        ];
+        for(var i=0;i<questions.length;i++){
+            askQuestion(questions[i]);
+        }
+
+        function askQuestion(questions){
+            var answer=prompt(questions[0],'')
+        }
+    </script>
+</body>
+
+</html>

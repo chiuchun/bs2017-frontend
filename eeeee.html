@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Horoscope</title>
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="stylesheets/dashboard.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+
+    </div>
+
+    <div class="col-md-6">
+
+        <div class="row">
+            <div class="input-group">
+                <h1>請輸入出生年月日</h1>
+                <input type="date" name="<h3></h3>" value="r" input id="inputtext">
+                <button class="btn btn-default" type="button" onclick="doResult();">Go!</button>
+            </div>
+        </div>
+
+
+
+
+        <div class="col-md-6">
+            <div class="row">
+               <h3> 關於你</h3>
+                <ul id="allResultsHistory" class="list-group">
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
+<script>
+    function doResult(){
+        var date=document.getElementById("inputtext")
+        var a=gettime(inputtext);
+         var b = birthday(inputtext);
+    }
+   /* function gettime(inputtext){
+        var date=new Date(inputtext)
+        var yy=date.getFullYear();
+        var dd=date.getDay();
+        var mm=date.getMonth();
+
+        alert(yy+mm+dd);       
+    }*/
+
+    function birthday(inputtext) {
+      var date = new Date(inputtext);
+      var year = date.getFullYear();
+      var mm = date.getMonth() + 1;
+      var dd = date.getDate();
+      alert(mm);
+    }
+    </script>
+
+
+
+</body>
+
+</html>

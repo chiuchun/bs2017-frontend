@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./stylesheets/bootstrap-theme.min" rel="stylesheet">
+    </head>
+    <body>
+       
+       <button type="button" class="btn btn-default" onclick="no()">button</button>
+            <button type="button" class="btn btn-default" onclick="noao()">button</button>
+            
+            <button type="button" class="btn btn-default" onclick="a()">button</button>
+            
+       
+
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        var author=['1a','2a','3a','4a'];
+
+        function no(){
+           var co=0;
+           while (co<author.length){
+               document.write(author[co]+',')
+               co++;
+           }
+          
+           }
+       function noao(){
+          var today=new Date();
+          document.write(today);
+          }
+
+          function a(message){
+            document.write(message);
+            a('45');
+          }
+        </script>
+    </body>
+</html>

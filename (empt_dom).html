@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style> 
+         h5{
+             color:red;
+         }
+        </style>
+    </head>
+    <body>
+        <hr>計算結果為 :</hr>
+        <div id="result"></div>
+       
+        <script>
+            
+            var tempc=prompt("請輸入攝氏溫度");
+            var tempf=(tempc*1.8)+32;
+            var text="攝氏"+tempc+"度,等於華視"+tempf+"度";
+        
+            var s=document.createElement("h5");//
+            s.innerHTML=text;//text裡面的文字 丟入標籤h5
+
+            document.getElementById("result").appendChild(s);//抓到要放的位址,空的div
+            //上面事先抓找要放的位址           標籤丟入區塊
+        </script>
+    </body>
+</html>

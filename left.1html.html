@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./stylesheets/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>生命靈數</h1>
+
+    <div class="input-group">
+        <input type="date" input id="birthdate" class="form-control" placeholder="Search for...">
+        <span class="input-group-btn">
+        <button class="btn btn-default" type="button" onclick="birthdate()">分析</button>
+      </span>
+    </div>
+    <div>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <span class="badge">14</span> Cras justo odio
+            </li>
+        </ul>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <script>
+   function birthdate(dateString){
+    var date=$("birthdate").val(dateString);
+    var date =new Date();
+    m = date.getMonth()+1,
+    d = date.getDate();
+    alert(m);
+     if ((m == 1 && d >= 21) || (m == 2 && d <= 19)) {
+          return "aquarius";
+        } else if ((m == 2 && d >= 20) || (m == 3 && d <= 20)) {
+          return "pisces";
+        } else if ((m == 3 && d >= 21) || (m == 4 && d <= 19)) {
+          return "aries";
+        } else if ((m == 4 && d >= 20) || (m == 5 && d <= 20)) {
+          return "taurus";
+        } else if ((m == 5 && d >= 21) || (m == 6 && d <= 21)) {
+          return "gemini";
+        } else if ((m == 6 && d >= 22) || (m == 7 && d <= 22)) {
+          return "cancer";
+        } else if ((m == 7 && d >= 23) || (m == 8 && d <= 22)) {
+          return "leo";
+        } else if ((m == 8 && d >= 23) || (m == 9 && d <= 22)) {
+          return "virgo";
+        } else if ((m == 9 && d >= 23) || (m == 10 && d <= 23)) {
+          return "libra";
+        } else if ((m == 10 && d >= 24) || (m == 11 && d <= 21)) {
+          return "scorpio";
+        } else if ((m == 11 && d >= 22) || (m == 12 && d <= 20)) {
+          return "sagittarius";
+        } else /*if ((m == 12 && d >= 21) || (m == 1 && d <= 20))*/ { 
+          return "capricorn";
+        }
+      }
+
+
+
+   
+
+    </script>
+
+</body>
+
+</html>

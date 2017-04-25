@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./stylesheets/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1><a href="#">累計稅率</a></h1>
+    <div class="input-group">
+        <input type="text" class="form-control" input id="holle" placeholder="Search for...">
+        <span class="input-group-btn">
+        <button class="btn btn-default" type="button" onclick="helloword()">計算金額</button>
+      </span>
+    </div>
+    <form>
+        <ul class="list-group" id="list1">
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Morbi leo risus</li>
+            <li class="list-group-item">Porta ac consectetur ac</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+    </form>
+    <script>
+        var taxRateLookup = [
+            { min: 0, max: 540000, rate: .05 },
+            { min: 540001, max: 121000, rate: .12 },
+            { min: 121001, max: 2420000, rate: .2 },
+            { min: 242001, max: 453000, rate: .3 },
+            { min: 453001, max: 1031000, rate: .4 },
+            { min: 10310001, max: null, rate: .5 },
+
+        ];
+        function helloword() {
+            document.getElementById("list1").innerHTML = "";
+            var Holle = document.getElementById("holle").value;
+            alert(Holle);
+            var moneymix = 0;
+            var moneymax=0;
+            var moneyrate=0;
+            var co;
+            var Holle=parseInt(Holle);
+            for (var i = 0; i < taxRateLookup.length; i++){
+             
+                moneymix=taxRateLookup[i].min;
+                moneymax=taxRateLookup[i].max;
+                moneyrate=taxRateLookup[i].rate;
+                if(i=0){
+                    moneymix[0]<Holle && moneymax[0]>Holle
+            
+                    alert(i);
+                    co=(Holle*0.05);
+                    alert(co);
+
+                
+                }
+
+
+            }
+           
+            
+
+
+
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./stylesheets/bootstrap.min.css" rel="stylesheet">
+</head>
+<script src="./bootstrap-sweetalert-master/dist/sweetalert.min"></script>
+<link rel="stylesheet" type="text/css" href="./bootstrap-sweetalert-master/dist/sweetalert.css">
+
+<body>
+    <script>
+        
+        function coclate() {
+            var result = document.getElementById("result").value;
+            var convertf = document.getElementById("convert-f");
+            var convertc = document.getElementById("convert-c");
+            //document.getElementById("result");
+            //document.getElementById("list1").innerHTML="";
+            var r = 0;
+            if (convertf.checked) {
+                r = (result * 1.8) + 32;
+
+            }
+            else if (convertc.checked) {
+                r = (result + 32) * 1.8;
+            }
+            alert(r);
+            swal("Here's a message!");
+            sweet-alert("123");
+            var re = document.createElement("li");
+            re.className="list-group-item";
+            //    var list1 = document.createElement("h1");
+            re.innerHTML = r;
+            document.getElementById("list1").appendChild(re);
+        }
+
+
+        function press(text) {
+            var result = document.getElementById("result");
+            result.value += text;
+        }
+        function c(){
+         var list1=document.getElementById("list1");
+            list1.innerHTML="";
+        }
+        
+    </script>
+
+    <div class="container">
+        <div class="radio">
+            <label>
+                <input type="radio" name="convert" id="convert-f" value="" checked="checked">攝氏轉華氏               
+            </label>
+            <label>
+                <input type="radio" name="convert" id="convert-c" value="" checked="checked">華氏轉攝氏
+            </label>
+        </div>
+        <div class="btn-group btn-group-justified" role="group" aria-label="...">
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default" onclick="return press('1')">1</button>
+            </div>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default" onclick="return press('2')">2</button>
+            </div>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default" onclick="return press('3')">3</button>
+            </div>
+        </div>
+
+
+        <div class="btn-group btn-group-justified" role="group" aria-label="...">
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default" onclick="return press('4')">4</button>
+            </div>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default" onclick="return press('5')">5</button>
+            </div>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default" onclick="return press('6')">6</button>
+            </div>
+        </div>
+
+
+        <div class="btn-group btn-group-justified" role="group" aria-label="...">
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default" onclick="return press('7')">7</button>
+            </div>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default" onclick="return press('8')">8</button>
+            </div>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default" onclick="return press('9')">9</button>
+            </div>
+        </div>
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search for..." id="result">
+            <span class="input-group-btn">
+        <button class="btn btn-default" type="button" onclick="coclate();">Go!</button>
+         <button class="btn btn-default" type="button" onclick="c();">Go!</button>
+      </span>
+        </div>
+        <!-- /input-group -->
+        <div>
+        <ul class="list-group" id="list1">
+           <ul class="list-group">
+  <li class="list-group-item list-group-item-success">Dapibus ac facilisis in</li>
+  <li class="list-group-item list-group-item-info">Cras sit amet nibh libero</li>
+  <li class="list-group-item list-group-item-warning">Porta ac consectetur ac</li>
+  <li class="list-group-item list-group-item-danger">Vestibulum at eros</li>
+</ul>
+        </ul>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>

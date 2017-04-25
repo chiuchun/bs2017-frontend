@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <pre><script>
+            // 在這裡填入你的 JavaScript 的測試程式
+            // document.writeln() 類似 C# 的 Console.WriteLine()
+            // prompt() 類似 C# 的 Console.ReadLine()
+            var run=Math.floor(Math.random()*10),
+                play=true,
+                guess="";
+          
+            while(play)
+            {
+             guess=prompt("猜"+guess)
+            if(guess==run)
+            {
+                document.writeln("ok"+run);
+                play=false;
+                
+            }
+             else{
+                window.alert("加油好嗎?");
+                
+            }
+            
+           
+             }
+             
+        </script></pre>
+        <script language="javascript">
+function ShowMeDate() {
+　var Today=new Date();
+　alert("今天日期是 " + Today.getFullYear()+ " 年 " + (Today.getMonth()+1) + " 月 " + Today.getDate() + " 日"+Today.getHours()+"時"+Today.getMinutes()+"分");
+}
+</script>
+<button onclick="ShowMeDate()">告訴我今天日期</button>
+    </body>
+</html>

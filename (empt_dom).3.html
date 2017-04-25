@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style> 
+         h5{
+             color:aqua;
+         }
+        #show{
+             background-color: deeppink;
+         }
+         #tt{
+             color: blue;
+         }
+         #on
+         {
+             background-color:mediumspringgreen;
+         }
+        </style>
+    </head>
+    <body>
+       <a href="#" id="tt">  計算結果為</a>
+        <div id="result"></div>
+        <button id="show">顯示結果</button>
+       
+        <script>
+            document.getElementById("show").onclick=hello;
+            function hello(){
+            var tempc=prompt("請輸入攝氏溫度");
+            var tempf=(tempc*1.8)+32;
+            var text="攝氏"+tempc+"度,等於華視"+tempf+"度";
+        
+            var s=document.createElement("h5");//
+            s.innerHTML=text;//text裡面的文字 丟入標籤h5
+
+            document.getElementById("result").appendChild(s);//抓到要放的位址,空的div
+            //上面事先抓找要放的位址           標籤丟入區塊
+            }
+        </script>
+        <script language="javascript">
+           function ShowMeDate()
+            {
+             　var Today=new Date();
+　              alert("今天日期是 " + Today.getFullYear()+ " 年 " + (Today.getMonth()+1) + " 月 " + Today.getDate() + " 日"+Today.getHours()+"時"+Today.getMinutes()+"分");
+            }
+        </script>
+        <button  id="on"" onclick="ShowMeDate()">告訴我今天日期</button>
+
+    </body>
+</html>
